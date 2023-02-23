@@ -16,7 +16,7 @@ const allCurrency = useSelector(selectorsCurrency.getAccessibleCurrency)
 const onChange = el => {dispatch(onChangeAccount({name: el.target.name,value: el.target.value}))}
 
   useEffect(()=> {
-    dispatch(operationsCompany.getAll()) // eslint-disable-next-line
+    !allCompanies && dispatch(operationsCompany.getAll()) // eslint-disable-next-line
     dispatch(operationsCurrency.getAccessibleCurrency()) // eslint-disable-next-line
   }, []) // eslint-disable-next-line
 

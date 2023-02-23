@@ -2,8 +2,13 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const getAll = createAsyncThunk( 'account/getAll', async (id, thunkApi) => {
+  const filterId = thunkApi.getState().account.filter.company.id
+let url = '/account'
+if(filterId) url = url + `?filter=${filterId}`
+
+
   try {
-    const res = await axios.get('/account')
+    const res = await axios.get(url)
     return res.data
   } catch (error) {
     console.error(error.mesage)

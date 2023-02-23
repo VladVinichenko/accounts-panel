@@ -4,6 +4,7 @@ import { operationsAccount } from "./account-operation";
 const initialState = {
   accounts: [],
   account: { company: null, name: null, accountAmount: null, currency: null },
+  filter: {company: {name: null, id: null}},
   isModalAddAccountOpen: false,
   isLoading: false,
   isError: null,
@@ -21,6 +22,12 @@ const accountSlice = createSlice({
     },
     onChangeAccount: (state, {payload}) => {
       state.account[payload.name] = payload.value;
+    },
+    onChangefilter: (state, {payload}) => {
+      state.filter[payload.filter]={name: payload.name, id: payload.value};
+    },
+    removefilter: (state, {payload}) => {
+      state.filter = initialState.filter;
     },
   },
   extraReducers: {
@@ -72,4 +79,4 @@ const accountSlice = createSlice({
 
 export default accountSlice.reducer;
 
-export const { openModal, closeModal, onChangeAccount } = accountSlice.actions;
+export const { openModal, closeModal, onChangeAccount, onChangefilter, removefilter } = accountSlice.actions;
