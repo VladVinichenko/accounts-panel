@@ -5,11 +5,14 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./redux";
 import { Main } from "./page/main";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { GlobalStyle } from './stylesheet/globalStyles'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+    <GlobalStyle />
       <Main />
     </Provider>
   </React.StrictMode>

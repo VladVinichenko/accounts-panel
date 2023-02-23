@@ -1,4 +1,4 @@
-const getAccessibleCurrency = (state) => state.getAccessibleCurrency
+const getAccessibleCurrency = (state) => state.currency.currency
 
 export const selectorsCurrency = {
   getAccessibleCurrency
