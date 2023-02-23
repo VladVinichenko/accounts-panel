@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Container } from "../../components/Container";
 import { Button } from "react-bootstrap";
 import { openModal } from "../../redux/account/account-slice";

@@ -18,7 +18,7 @@ const onChange = el => {dispatch(onChangeAccount({name: el.target.name,value: el
   useEffect(()=> {
     dispatch(operationsCompany.getAll())
     dispatch(operationsCurrency.getAccessibleCurrency())
-  }, [])
+  }, []) // eslint-disable-next-line
 
 
   return (

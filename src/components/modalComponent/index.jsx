@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { createPortal } from 'react-dom'
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectorsAccount } from '../../redux/account/account-selectors';

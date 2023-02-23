@@ -5,9 +5,8 @@ import currencySlice from './currency/currency-slice';
 import companySlice from './company/company-slice';
 import accountSlice from './account/account-slice';
 
-// axios.defaults.baseURL = process.env.REACT_APP_API_URL
-axios.defaults.baseURL = 'http://localhost:8080'
-// console.log(process.env.REACT_APP_API_URL);
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
+// axios.defaults.baseURL = 'http://localhost:8080'
 
 const rootReducer = combineReducers({
 	currency: currencySlice,

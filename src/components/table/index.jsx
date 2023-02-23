@@ -9,7 +9,7 @@ import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 export const TableAccounts = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
 
   const dataTable = useSelector(selectorsAccount.getAll);
   const isLoadingTable = useSelector(selectorsAccount.isLoading);
@@ -19,7 +19,7 @@ export const TableAccounts = () => {
 
   useEffect(() => {
     dispatch(operationsAccount.getAll());
-  }, []);
+  }, []); // eslint-disable-next-line
 
   return (
     <>
