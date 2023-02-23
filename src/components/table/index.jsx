@@ -18,7 +18,7 @@ export const TableAccounts = () => {
   };
 
   useEffect(() => {
-    dispatch(operationsAccount.getAll());
+    dispatch(operationsAccount.getAll());// eslint-disable-next-line
   }, []); // eslint-disable-next-line
 
   return (
