@@ -50,7 +50,8 @@ const accountSlice = createSlice({
       state.isError = null;
     },
     [operationsAccount.createAccount.fulfilled]: (state, { payload }) => {
-      state.accounts.push(payload) ;
+      console.log(payload);
+      state.accounts = [...state.accounts, payload];
 			state.account = initialState.account;
 			state.isModalAddAccountOpen = false
       state.isLoading = false;

@@ -25,7 +25,7 @@ const createAccount = createAsyncThunk( 'account/create', async (id, thunkApi) =
   }
 })
 
-const createPayment = createAsyncThunk( 'account/create', async (id, thunkApi) => {
+const createPayment = createAsyncThunk( 'account/createPatment', async (id, thunkApi) => {
   const data = {sendPayment: 'send'}
   try {
     const res = await axios.put(`/account/${id}`, data)
