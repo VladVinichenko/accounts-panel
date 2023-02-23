@@ -62,7 +62,6 @@ export const TableAccounts = () => {
               <td>
               <DropdownButton
             as={ButtonGroup}
-            // id={`dropdown-button-drop-${idx}`}
             size="sm"
             variant="secondary"
             title={selectedFilter.company.name ||'Компанія'}
@@ -72,9 +71,6 @@ export const TableAccounts = () => {
             {allCompanies && allCompanies.map(el => (
               <Dropdown.Item key={el._id} id={el._id} name={el.name} onClick={onClickFilter}>{el.name}</Dropdown.Item>
             ))}
-            {/* <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-            <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-            <Dropdown.Item eventKey="4">Separated link</Dropdown.Item> */}
           </DropdownButton>
               </td>
               <td>Назва гри</td>
